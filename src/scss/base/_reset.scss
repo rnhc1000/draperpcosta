@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background: linear-gradient(115deg, rgba(0,0,0,0.15), rgba(0, 0, 0, 0.55)),url('../../assets/img/dna-ia.jpg');
+    height: 100%; 
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2rem;
+    color: --var(white);
+}
+
