@@ -1,27 +1,74 @@
-# Draperpcosta
+# Portfolio Dra Perpétua Costa
+Estágio inicial de um portal eletronico pessoal dedicado
+à Genética e à Saúde sob o ponto de vista da docência.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+## _Roadmap of Future App Features_ 
+ - URL: https://draperpcosta.pro.br
+ - Blog.
+ - Bate papo
+ - podcasts e videos 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## _Table of contents_
+- [Portfolio Dra Perpétua Costa](#portfolio-dra-perpétua-costa)
+  - [_Roadmap of Future App Features_](#roadmap-of-future-app-features)
+  - [_Table of contents_](#table-of-contents)
+  - [_Overview_](#overview)
+  - [_Screenshot_](#screenshot)
+  - [_Links_](#links)
+  - [_Built with_](#built-with)
+  - [_What I practiced_](#what-i-practiced)
+  - [_Continued development_](#continued-development)
+    - [_Useful resources_](#useful-resources)
+  - [_Author_](#author)
+  - [Acknowledgments](#acknowledgments)
+## _Overview_
+The design is structured as shown:
+- src|
+  - app |
+     - modules |
+          -  components |
+          -  enum
+          -  interface
+          -  pages 
+  - assets |
+  - scss|
+    - base
+    -  components
+    -  layout
+    -  theme
+  - _index.scss
+- index.html
+- main.ts
+- styles.css 
 
-## Code scaffolding
+## _Screenshot_
+[![](./draPerpCostaReadme.png)](https://draperpcosta.pro.br)
+## _Links_
+- Live Site URL: [https://draperpcosta.pro.br] 
+## _Built with_
+[![My Sillks](https://skillicons.dev/icons?i=ts,angular,firebase,git,materialui,html,css,nginx,docker,redhat,aws,vscode)](https://skillicons.dev)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ ## _What I practiced_
+``` tsx
+import { Routes } from '@angular/router';
+import { HomeComponent } from './modules/pages/home/home.component';
 
-## Build
+export const routes: Routes = [
+    {
+        path: '',
+        component: HomeComponent    
+    }
+];
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+``` 
+## _Continued development_
+- Next step: Keep building the baseline 
+### _Useful resources_
+- [https://angular.io] Mandatory stop by to really learn the nitty-gritty of Angular.
+- [https://material.angular.io/] Material Design components for Angular
+- [https://html-css-js.com/] Mandatory pit stop at this site.
+## _Author_
+- Website - [https://ferreiras.dev.br] 
+## Acknowledgments
+- @rnhc1000 and God
