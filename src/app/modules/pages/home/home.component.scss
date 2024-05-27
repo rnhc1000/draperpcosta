@@ -20,6 +20,29 @@
             height: 512px;
         }
 
+        h1 {
+            color: var(--orange);
+            font-weight: 450;
+            font-size: 3.5rem;
+            align-items: center;
+
+        }
+
+        h3 {
+            color: var(--white);
+            font-weight: 400;
+            font-size: 2rem;
+            align-items: center;
+        }
+
     }
+
+    @media (max-width: 640px) {
+        div.container {
+            width: 100%;
+            color: var(--white);
+        }
+    }
+
 
 }

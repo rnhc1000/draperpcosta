@@ -5,7 +5,7 @@
 }
 
 body, html {
-    background: linear-gradient(115deg, rgba(0,0,0,0.15), rgba(0, 0, 0, 0.55)),url('../../assets/img/dna-ia.jpg');
+    background: linear-gradient(115deg, rgba(0,0,0,0.15), rgba(0, 0, 0, 0.55)),url('../../assets/img/dna-ia.jpg.webp');
     height: 100%; 
     background-size: cover;
     scroll-behavior: smooth;
@@ -18,6 +18,5 @@ body {
 h1 {
     font-weight: 300;
     font-size: 2rem;
-    color: --var(white);
 }
 
