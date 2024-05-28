@@ -50,16 +50,53 @@ The design is structured as shown:
 [![My Sillks](https://skillicons.dev/icons?i=ts,angular,firebase,git,materialui,html,css,nginx,docker,redhat,aws,vscode)](https://skillicons.dev)
 
  ## _What I practiced_
-``` tsx
-import { Routes } from '@angular/router';
-import { HomeComponent } from './modules/pages/home/home.component';
+``` ts
+export class CreateDisciplineComponent implements OnInit {
 
-export const routes: Routes = [
-    {
-        path: '',
-        component: HomeComponent    
-    }
-];
+  disciplineId: string;
+
+  form = this.fb.group({
+    description: ['', Validators.required],
+    category: ['', Validators.required],
+    url: ['', Validators.required],
+    longDescription: ['', Validators.required],
+    disciplineStartAt: ['',Validators.required]
+  })
+
+  constructor(
+    private fb: FormBuilder,
+    private disciplinesService: DisciplinesService,
+    private afs: AngularFirestore,
+    private router: Router) {
+  }
+
+  ngOnInit() {
+    this.disciplineId = this.afs.createId();
+  }
+
+  onCreateDiscipline() {
+    const newDiscipline = { ...this.form.value as Discipline };
+
+    newDiscipline.disciplineStartAt = Timestamp.fromDate(this.form.value.disciplineStartAt);
+
+    console.log(newDiscipline);
+
+    this.disciplines.Service.createCourse(newDiscipline, this.disciplineId)
+      .pipe(
+        tap(discipline => {
+          console.log("Created new Discipline: ", discipline);
+          this.router.navigateByUrl("/disciplines")
+        }),
+        catchError(err => {
+          console.log(err);
+          alert("Could not create the discipline!");
+          return throwError(err);
+        })
+      )
+      .subscribe();
+  }
+
+}
 
 ``` 
 ## _Continued development_
